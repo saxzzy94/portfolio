@@ -48,7 +48,7 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #063622;
+  background: #0e1c26;
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
@@ -58,7 +58,7 @@
   opacity: 0.9;
 }
 .menu-branding {
-  background: #084d30;
+  background: #152939;
   transform: translate3d(0, 100%, 0);
   transition: all 0.5s ease-out;
 }
@@ -71,7 +71,7 @@
   background: url("../img/img.png");
   filter: grayscale(100%);
   border-radius: 50%;
-  border: solid 3px #19a041;
+  border: solid 3px #e0a80d;
   background-position: center;
   background-size: cover;
   opacity: 1;
@@ -84,7 +84,7 @@
   transform: translate3d(0, 0, 0);
 }
 .menu .nav-item.current > a {
-  color: #19a041;
+  color: #e0a80d;
 }
 .menu .nav-link {
   display: inline-block;
@@ -98,7 +98,7 @@
   transition: all 0.5s ease-out;
 }
 .menu .nav-link:hover {
-  color: #19a041;
+  color: #e0a80d;
 }
 
 .nav-item:nth-child(1) {
@@ -122,11 +122,11 @@
 }
 
 body {
-  background: #084d30;
+  background: #152939;
   color: white;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 body#bg-img {
@@ -141,7 +141,7 @@ body#bg-img:after {
   right: 0;
   height: 100%;
   width: 100%;
-  background: rgba(8, 77, 48, 0.9);
+  background: rgba(21, 41, 57, 0.9);
   z-index: -1;
 }
 
@@ -161,7 +161,7 @@ h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(9, 86, 54, 0.5);
+  background: rgba(24, 46, 64, 0.5);
 }
 
 a {
@@ -176,7 +176,7 @@ header {
 }
 
 .text-secondary {
-  color: #19a041;
+  color: #e0a80d;
 }
 
 main {
@@ -191,7 +191,7 @@ main .icon a {
   padding: 0.4rem;
 }
 main .icon a:hover {
-  color: #19a041;
+  color: #e0a80d;
   transition: all 0.5s ease-out;
   z-index: 20;
 }
@@ -212,7 +212,7 @@ main .about-info .bio-image {
   grid-area: bioimage;
   margin: auto;
   border-radius: 10%;
-  border: #19a041 3px solid;
+  border: #e0a80d 3px solid;
   width: 200px;
   height: 200px;
 }
@@ -230,14 +230,15 @@ main .about-info .job-3 {
   grid-area: job3;
 }
 main .about-info .job {
-  background: #0a643e;
+  background: #1c364c;
   padding: 0.5rem;
-  border-bottom: #19a041 5px solid;
+  border-bottom: #e0a80d 5px solid;
 }
 
 .projects {
   display: grid;
   grid-gap: 30px;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .projects img {
@@ -247,27 +248,51 @@ main .about-info .job {
 }
 .projects img:hover {
   opacity: 0.5;
-  border-color: #19a041;
+  border-color: #e0a80d;
   transition: all 0.5s ease-out;
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #031f13;
+  background: #070e14;
   color: white;
   height: 60px;
 }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: left;
+  margin-top: 2rem;
+}
+.boxes div {
+  font-size: 2rem;
+  border: 3px solid;
+  border-color: white;
+  padding: 0.7rem 1.6rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+.boxes div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #e0a80d;
+  color: black;
+}
+.boxes div:hover span {
+  color: black;
+}
+
 .btn, .btn-light, .btn-dark {
-  display: inline-block;
+  display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
 }
 .btn:hover, .btn-light:hover, .btn-dark:hover {
-  background: #19a041;
-  color: white;
+  background: #e0a80d;
+  color: black;
 }
 
 .btn-dark {
@@ -276,7 +301,7 @@ main .about-info .job {
 }
 
 .btn-light {
-  background: #65efb5;
+  background: #7eabcf;
   color: #333;
 }
 
@@ -298,7 +323,7 @@ main .about-info .job {
   main .lg-heading {
     line-height: 1;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 4rem;
   }
   main .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
@@ -341,8 +366,24 @@ div.menu-branding.show {
   }
 }
 @media screen and (max-width: 500px) {
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+  }
+  main .sm-heading {
+    font-size: 1rem;
+  }
+
   main#home h1 {
     margin-top: 10vh;
+  }
+
+  .boxes {
+    justify-content: center;
+  }
+  .boxes div {
+    font-size: 0.9rem;
   }
 }
 
